@@ -33,7 +33,7 @@ const AuthProvider = ({ children }) => {
   //   // Function to fetch active user data from the backend
   //   const fetchActiveUsers = async () => {
   //     if (location && user?.email) {
-  //       fetch("https://vercel.live/link/ambulance-project-backend.vercel.app?via=project-dashboard-alias-list&p=1activeUsers-data", {
+  //       fetch("https://ambulance-project-backend.vercel.app/activeUsers-data", {
   //         method: "PUT",
   //         headers: {
   //           "Content-Type": "application/json",

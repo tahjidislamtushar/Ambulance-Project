@@ -14,7 +14,7 @@ const UserDetailsPage = ({}) => {
 
   useEffect(() => {
     setLoading(true);
-    fetch(`https://vercel.live/link/ambulance-project-backend.vercel.app?via=project-dashboard-alias-list&p=1user/${id}`)
+    fetch(`https://ambulance-project-backend.vercel.app/user/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setLoading(false);

@@ -11,7 +11,7 @@ const ManageAdminElement = ({ data, remainingUsers, i }) => {
     }).then((willDelete) => {
       if (willDelete) {
         remainingUsers(data._id);
-        fetch(`https://vercel.live/link/ambulance-project-backend.vercel.app?via=project-dashboard-alias-list&p=1users/user`, {
+        fetch(`https://ambulance-project-backend.vercel.app/users/user`, {
           method: "PUT",
           headers: {
             "content-type": "application/json",

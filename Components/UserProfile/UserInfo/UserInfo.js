@@ -18,11 +18,11 @@ const UserInfo = (props) => {
 
   const [data, setData] = useState();
   useEffect(() => {
-    fetch(`https://vercel.live/link/ambulance-project-backend.vercel.app?via=project-dashboard-alias-list&p=1users-data/${user?.email}`)
+    fetch(`https://ambulance-project-backend.vercel.app/users-data/${user?.email}`)
       .then((res) => res.json())
       .then((data) => setData(data))
       .then(() =>
-        fetch("https://vercel.live/link/ambulance-project-backend.vercel.app?via=project-dashboard-alias-list&p=1rideCompleted")
+        fetch("https://ambulance-project-backend.vercel.app/rideCompleted")
           .then((res) => res.json())
           .then((data) => {
             if (userInfo?.role === "Driver") {
@@ -118,7 +118,7 @@ const UserInfo = (props) => {
           ),
         };
         setIsLoading(true);
-        fetch("https://vercel.live/link/ambulance-project-backend.vercel.app?via=project-dashboard-alias-list&p=1report")
+        fetch("https://ambulance-project-backend.vercel.app/report")
           .then((res) => res.json())
           .then((data) => {
             const reportCheck = data?.find(
@@ -136,7 +136,7 @@ const UserInfo = (props) => {
               setIsLoading(false);
               setOpenReport(false);
             } else {
-              fetch("https://vercel.live/link/ambulance-project-backend.vercel.app?via=project-dashboard-alias-list&p=1report", {
+              fetch("https://ambulance-project-backend.vercel.app/report", {
                 method: "POST",
                 headers: {
                   "Content-Type": "application/json",

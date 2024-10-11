@@ -16,7 +16,7 @@ const StarRating = () => {
 
   useEffect(() => {
     if (id) {
-      fetch(`https://vercel.live/link/ambulance-project-backend.vercel.app?via=project-dashboard-alias-list&p=1user/${id}`)
+      fetch(`https://ambulance-project-backend.vercel.app/user/${id}`)
         .then((res) => res.json())
         .then((data) => setData(data))
         .catch((error) => {
@@ -53,7 +53,7 @@ const StarRating = () => {
         ],
       };
       console.log(driverData);
-      fetch("https://vercel.live/link/ambulance-project-backend.vercel.app?via=project-dashboard-alias-list&p=1profile-update", {
+      fetch("https://ambulance-project-backend.vercel.app/profile-update", {
         method: "PUT",
         headers: { "content-type": "application/json" },
         body: JSON.stringify(driverData),

@@ -11,7 +11,7 @@ const AddAdminMain = () => {
   const handleAdminSubmit = (e) => {
     const user = { email };
 
-    fetch("https://vercel.live/link/ambulance-project-backend.vercel.app?via=project-dashboard-alias-list&p=1users/admin", {
+    fetch("https://ambulance-project-backend.vercel.app/users/admin", {
       method: "PUT",
       headers: {
         "content-type": "application/json",

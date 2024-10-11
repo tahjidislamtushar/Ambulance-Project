@@ -8,7 +8,7 @@ const GiveInfoMain = () => {
   const { user } = useAuth();
   const [data, setData] = useState();
   useEffect(() => {
-    fetch(`https://vercel.live/link/ambulance-project-backend.vercel.app?via=project-dashboard-alias-list&p=1users-data/${user?.email}`)
+    fetch(`https://ambulance-project-backend.vercel.app/users-data/${user?.email}`)
       .then((res) => res.json())
       .then((data) => setData(data))
       .catch((error) => {

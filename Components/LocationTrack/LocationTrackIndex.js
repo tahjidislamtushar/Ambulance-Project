@@ -24,7 +24,7 @@ const LocationTrackIndex = () => {
     useState(rideRequests);
 
   useEffect(() => {
-    fetch(`https://vercel.live/link/ambulance-project-backend.vercel.app?via=project-dashboard-alias-list&p=1rideRequest`)
+    fetch(`https://ambulance-project-backend.vercel.app/rideRequest`)
       .then((res) => res.json())
       .then((data) => {
         setRideRequests(data);
