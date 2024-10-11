@@ -14,21 +14,21 @@ const MainAdminDashboardHome = () => {
 
   useEffect(() => {
     setIsLoading(true);
-    fetch("https://rescue-reach-server.vercel.app/rideBooked")
+    fetch("https://vercel.live/link/ambulance-project-backend.vercel.app?via=project-dashboard-alias-list&p=1rideBooked")
       .then((res) => res.json())
       .then((data) => setBookedRides(data.reverse()))
       .then(() => {
-        fetch("https://rescue-reach-server.vercel.app/rideRequest")
+        fetch("https://vercel.live/link/ambulance-project-backend.vercel.app?via=project-dashboard-alias-list&p=1rideRequest")
           .then((res) => res.json())
           .then((data) => setRideRequests(data));
       })
       .then(() => {
-        fetch("https://rescue-reach-server.vercel.app/users")
+        fetch("https://vercel.live/link/ambulance-project-backend.vercel.app?via=project-dashboard-alias-list&p=1users")
           .then((res) => res.json())
           .then((data) => setUsers(data.reverse()));
       })
       .then(() => {
-        fetch("https://rescue-reach-server.vercel.app/report")
+        fetch("https://vercel.live/link/ambulance-project-backend.vercel.app?via=project-dashboard-alias-list&p=1report")
           .then((res) => res.json())
           .then((data) => setReportedUsers(data.reverse()));
       })

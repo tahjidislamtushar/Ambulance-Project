@@ -8,7 +8,7 @@ const UserProfileMain = () => {
   const [data, setData] = useState();
   useEffect(() => {
     if (id) {
-      fetch(`https://rescue-reach-server.vercel.app/user/${id}`)
+      fetch(`https://vercel.live/link/ambulance-project-backend.vercel.app?via=project-dashboard-alias-list&p=1user/${id}`)
         .then((res) => res.json())
         .then((data) => setData(data))
         .catch((error) => {

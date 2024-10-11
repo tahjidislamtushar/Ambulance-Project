@@ -246,7 +246,7 @@ const BookIndex = () => {
       };
       console.log(rideInfo);
       setIsLoading(true);
-      fetch("https://rescue-reach-server.vercel.app/rideRequest", {
+      fetch("https://vercel.live/link/ambulance-project-backend.vercel.app?via=project-dashboard-alias-list&p=1rideRequest", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -266,7 +266,7 @@ const BookIndex = () => {
   };
 
   useEffect(() => {
-    fetch("https://rescue-reach-server.vercel.app/doctor")
+    fetch("https://vercel.live/link/ambulance-project-backend.vercel.app?via=project-dashboard-alias-list&p=1doctor")
       .then((res) => res.json())
       .then((data) => {
         setAllDoctors(data);

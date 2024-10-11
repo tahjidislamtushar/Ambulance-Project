@@ -94,7 +94,7 @@ const ProfileEdit = (props) => {
       (userInfo?.profession && userInfo?.profession !== data?.profession) ||
       (userInfo?.phone && userInfo?.phone !== data?.phone)
     ) {
-      fetch("https://rescue-reach-server.vercel.app/profile-update", {
+      fetch("https://vercel.live/link/ambulance-project-backend.vercel.app?via=project-dashboard-alias-list&p=1profile-update", {
         method: "PUT",
         headers: { "content-type": "application/json" },
         body: JSON.stringify(userInfo),

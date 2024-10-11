@@ -41,7 +41,7 @@ const PaymentForm = ({ selectedRide, setIsLoading }) => {
     }).then((willDelete) => {
       if (willDelete) {
         setIsLoading(true);
-        fetch("https://rescue-reach-server.vercel.app/rideCompleted", {
+        fetch("https://vercel.live/link/ambulance-project-backend.vercel.app?via=project-dashboard-alias-list&p=1rideCompleted", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -50,7 +50,7 @@ const PaymentForm = ({ selectedRide, setIsLoading }) => {
             ...ride,
           }),
         }).then(() => {
-          const url = `https://rescue-reach-server.vercel.app/delete-rideBooked/${id}`;
+          const url = `https://vercel.live/link/ambulance-project-backend.vercel.app?via=project-dashboard-alias-list&p=1delete-rideBooked/${id}`;
           fetch(url, {
             method: "DELETE",
           })

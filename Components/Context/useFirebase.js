@@ -32,7 +32,7 @@ const useFirebase = () => {
     setIsLoading(true);
     createUserWithEmailAndPassword(auth, email, password)
       .then(() => {
-        fetch("https://rescue-reach-server.vercel.app/users-data", {
+        fetch("https://vercel.live/link/ambulance-project-backend.vercel.app?via=project-dashboard-alias-list&p=1users-data", {
           method: "POST",
           headers: {
             "content-type": "application/json",
@@ -102,7 +102,7 @@ const useFirebase = () => {
   }, [auth]);
 
   useEffect(() => {
-    fetch(`https://rescue-reach-server.vercel.app/users-data/${user?.email}`)
+    fetch(`https://vercel.live/link/ambulance-project-backend.vercel.app?via=project-dashboard-alias-list&p=1users-data/${user?.email}`)
       .then((res) => res.json())
       .then((data) => setUserInfo(data))
       .catch((error) => {
@@ -136,7 +136,7 @@ const useFirebase = () => {
     // Function to fetch active user data from the backend
     const fetchActiveUsers = async () => {
       if (location && user?.email) {
-        fetch("https://rescue-reach-server.vercel.app/activeUsers-data", {
+        fetch("https://vercel.live/link/ambulance-project-backend.vercel.app?via=project-dashboard-alias-list&p=1activeUsers-data", {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",

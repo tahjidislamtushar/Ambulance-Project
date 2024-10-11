@@ -236,7 +236,7 @@ const AddDoctorIndex = () => {
     };
     console.log(rideInfo);
     setIsLoading(true);
-    fetch("https://rescue-reach-server.vercel.app/doctor", {
+    fetch("https://vercel.live/link/ambulance-project-backend.vercel.app?via=project-dashboard-alias-list&p=1doctor", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
